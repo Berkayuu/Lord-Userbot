@@ -20,11 +20,11 @@ bground = "black"
 @register(outgoing=True, pattern=r"^\.(ascii|asciis)$")
 async def ascii(event):
     if not event.reply_to_msg_id:
-        await event.edit("`Mohon Balas Ke Media..`")
+        await event.edit("`reply medianya kayuu`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("`Balas Ke Gambar/Sticker/Video`")
+        await event.edit("`reply Ke Gambar/Sticker/Video`")
         return
     await event.edit("`Sedang Mendownload Media..`")
     if reply_message.photo:
@@ -56,7 +56,7 @@ async def ascii(event):
             "ascii.png",
         )
     try:
-        await event.edit("`Sedang Dalam Proses..`")
+        await event.edit("`mwawmawmawamwamw`")
         list = await random_color()
         color1 = list[0]
         color2 = list[1]
