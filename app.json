@@ -1,7 +1,7 @@
 {
   "name": "BERKAYU",
   "description": "CAPER JALUR USERBOT",
-  "logo": "https://tse3.mm.bing.net/th?id=OIP.BVicXYLsTU-TweihLhPjeAHaEo&pid=Api&P=0&w=240&h=151",
+  "logo": "https://tse4.mm.bing.net/th?id=OIP.AzZX9Rg1IDHwql1RnVg6DAHaEO&pid=Api&P=0&w=278&h=160",
   "keywords": [
     "telegram",
     "userbot",
@@ -10,8 +10,8 @@
     "productivity"
   ],
   "repository": "https://github.com/Berkayuu/Lord-Userbot",
-  "telegram": "https://t.me/hotmanparis",
-  "success_url": "https://t.me/hotmanparis",
+  "telegram": "https://t.me/liualvinas",
+  "success_url": "https://t.me/liualvinasmahaputra",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -23,11 +23,11 @@
       "required": true
     },
      "STRING_SESSION": {
-      "description": "usaha. cari sendiri kayu",
+      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya @liualvinas di telegram",
       "required": true
     },
     "HEROKU_APP_NAME": {
-      "description": "samain sama paling di atas",
+      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
       "required": true
     },
     "HEROKU_API_KEY": {
@@ -151,7 +151,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "GA BERKAYU GA KEREN",
+      "value": "LORD-USERBOT",
       "required": false
     },
     "ALIVE_NAME": {
