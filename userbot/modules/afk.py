@@ -24,10 +24,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"**• ᴍᴀᴀꜰ ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
-    f"**• ᴍᴀᴀꜰ ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n • ᴛᴜɴɢɢᴜ ꜱᴀᴍᴘᴀɪ ᴅɪᴀ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ!**",
-    f"**• ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!\n • ᴛᴜɴɢɢᴜʟᴀʜ ꜱᴀᴍᴘᴀɪ ᴏɴʟɪɴᴇ!**",
-    f"**• ᴍᴀᴀꜰ ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
+    f"**• 𝑀𝒜𝒜𝐹 {ALIVE_NAME} 𝓛𝓐𝓖𝓘 𝓑𝓔𝓡𝓚𝓐𝓨𝓤!**",
+    f"**• 𝑀𝒜𝒜𝐹 {ALIVE_NAME} 𝓛𝓐𝓖𝓘 𝓑𝓔𝓡𝓚𝓐𝓨𝓤\n • 𝒮𝒜𝐵𝒜𝑅 𝒴𝒜 𝒦𝒜𝒴𝒰!**",
+    f"**• 𝑀𝒜𝒜𝐹 {ALIVE_NAME} 𝓛𝓐𝓖𝓘 𝓑𝓔𝓡𝓚𝓐𝓨𝓤!\n • 𝒮𝒜𝐵𝒜𝑅 𝒴𝒜 𝒦𝒜𝒴𝒰!**",
+    f"**• 𝑀𝒜𝒜𝐹 {ALIVE_NAME} 𝓛𝓐𝓖𝓘 𝓑𝓔𝓡𝓚𝓐𝓨𝓤!**",
 ]
 
 
@@ -62,16 +62,16 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"- 𝗔 𝗙 𝗞 -\n**• ʟᴏʀᴅ ᴛᴇʟᴀʜ ᴀꜰᴋ**\
-        \n**• ᴀʟᴀꜱᴀɴ :** `{string}`")
+        await afk_e.edit(f"- 🪵🪵🪵🪵🪵 BERKAYU 🪵🪵🪵🪵🪵 -\n**➠ TELAH AFK**\
+        \n**• KARENA :** `{string}`")
     else:
-        await afk_e.edit("- 𝗔 𝗙 𝗞 -\n**• ʟᴏʀᴅ ᴛᴇʟᴀʜ ᴀꜰᴋ**")
+        await afk_e.edit("- 🪵🪵🪵🪵🪵 BERKAYU 🪵🪵🪵🪵🪵 -\n**➠ TELAH AFK**")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "【AFK】"))
+            await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "〖BERKAYU 🪵〗"))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="【AFK】"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="〖BERKAYU 🪵〗"))
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**Lord Telah AFK!**")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**TUKANG KAYU TELAH AFK!**")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -90,7 +90,7 @@ async def type_afk_is_not_true(notafk):
     global afk_end
     user = await bot.get_me()  # pylint:disable=E0602
     last = user.last_name
-    if last and last.endswith("【AFK】"):
+    if last and last.endswith("〖BERKAYU 🪵〗"):
         last1 = last[:-12]
     else:
         last1 = ""
@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("**ʟᴏʀᴅ ᴛᴇʟᴀʜ ᴋᴇᴍʙᴀʟɪ !!**")
+        msg = await notafk.respond("**ASSALAMUALAIKUM!!**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
@@ -166,8 +166,8 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"- 𝗔 𝗙 𝗞 -\n `{ALIVE_NAME}` **ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
-                        \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
+                    await mention.reply(f"- 𝗔 𝗙 𝗞 -\n `{ALIVE_NAME}` **OFF** {afk_since} **YANG LALU.**\
+                        \n**• KARENA :** `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
                 USERS.update({mention.sender_id: 1})
