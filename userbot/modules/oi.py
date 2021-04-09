@@ -2,7 +2,7 @@ from time import sleep
 from userbot.events import register
 
 
-@register(outgoing=True, pattern='^.cicak(?: |$)(.*)')
+@register(outgoing=True, pattern='^.haloo(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
@@ -18,9 +18,9 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
-    await typew.edit("`Hai Bulan Aku Mau Bilang`")
+    await typew.edit("`Hai, Aku Mau Bilang`")
     sleep(3)
-    await typew.edit("`Aku Sayang Kamu Bulannn`")
+    await typew.edit("`Aku Sayang Kamu `")
     sleep(1)
     await typew.edit("`I LOVE YOU MWAHH 💞`")
 # Create by myself @localheart
